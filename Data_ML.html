@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>   
+    <title>Sumo Wrestling Match Predictions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<div id="main">
+    <div class="w3-teal">
+      <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+      <div class="w3-container">
+        
+        <a href="Index.html" class="w3-bar-item w3-button w3-xlarge" style="color: #000; font-size: 24pt;"><h1>Sumo Wrestling Match Predictions</h1></a>
+      </div>
+    </div>
+</div>
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+    <a href="Index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="Data_ML.html" class="w3-bar-item w3-button">Data</a>
+    <a href="Report_Tab.html" class="w3-bar-item w3-button">Visualization</a>
+</div>
+
+<section id="heightinfo" style="background-color:white;">
+    <div class="container" style="height: 50px; padding-top: 20px;">
+    <div class="row">
+      <div class="col-md-12 mx-auto" style="text-align: center">
+        <div data-aos="fade-up">
+          <h5 style="color:black;"></h5>
+          
+        </div>
+      </div>
+  </div>  
+  </section>
+
+<section class=".wp-block-group__inner-container w3-center w3-display-container w3-content "><br></section>
+<div class="row">
+<div class="col-sm-1"></div>
+<div class="col-sm-4">
+<div class="card-deck">
+  <div class="card">
+    <img class="card-img-top" src="https://sumo-data-bucket.s3.amazonaws.com/green.PNG" alt="Card image cap" style="height: 20px;">
+    <div class="card-body">
+      <h2 class="card-title">Final Result</h2>
+      <img class="img-fluid" id="1st-image" src="https://sumo-data-bucket.s3.amazonaws.com/Capture.png" alt="Comparison" style="width: 600px; height: 700px;">
+      <p class="card-text"></p>
+     </div>
+  </div></div></div>
+
+    <div class="col-sm-6">
+    <div class="card">
+        
+        <div class="card-body">
+            <h4> **Understanding & Preparing Data:** </h4>
+            <li>Headers with Japanese terms were translated to English (stable for heya, wrestler for rikishi, tournament for basho, etc.).</li>
+                <li>All divisions below Makuuchi were dropped.</li>
+                    <li>All non-active wrestlers were dropped.</li>
+                        <li>Ranks were given a numerical value (from greatest to lowest: Yokozuna, Ozeki, Sekiwake,Komusubi, M1-18).</li>
+                            <li>Wrestler's age at the time of the tournament was calculated.</li>
+                                <li>For all matches, the differences in height, weight, age, and rank were calculated.</li>
+            
+           </div>
+        <div class="card-body">
+         <h4> **Machine Learning** </h4>
+    <li>Click hyperlink below to access Google Colab Notebook: </li>
+    <a href="https://colab.research.google.com/drive/1mwyxMXyvbrq9RxqpzQLxNomUelTJqf5r"  target="_blank">Google Colab Notebook For Machine Learning Info</a>
+    <li>Features used for machine learning: differences in height, weight, age and rank.</li>
+        <li>ML methods used: Logistic Regression, Decision Tree Classifier, Random Forest</li>
+            <li>Logistic Regression gave the highest Training/Testing Scores (59/55% respectively)</li>
+                <li>GridSearchCV was attempted but it took TOO DARN LONG!!!</li>
+                    <li>The LR model was trained using data from May 2004 to March 2021 and tested with May 2021 tournament results.</li>
+                        <li>The model came close to some actual results! It predicted Takakeisho as the winner (he was runner-up) while the actual winner, Terunofuji was predicted as the runner-up. Not bad! </li>
+                            <li>Ichinojo was the only perfectly predicted outcome with 9 wins, while the model predictions for Terunofuji, Wakatakakage and Shimanoumi were off by just 1 win.</li>
+                                <li>Things to improve the model: add more features like match win percentages or wrestler injuries.</li>
+                                    <li>Sumo has a very subjective nature to it, how wrestlers move up and down ranks can vary wildly from one tournament to another, and rules are not exactly written in stone.</li>
+
+        </div>
+      
+    </div>
+    </div>
+</div>
+
+
+  <section id="heightinfo" style="background-color:white;">
+    <div class="container" style="height: 60px; padding-top: 60px;">
+    <div class="row">
+      <div class="col-md-12 mx-auto" style="text-align: center">
+        <div data-aos="fade-up">
+          <h5 style="color:black;"></h5>
+          
+        </div>
+      </div>
+  </div>  
+  </section>
+
+
+
+
+
+
+
+  <section class=".wp-block-group__inner-container w3-center">
+    
+    <div class="container-fluid wp-block-group__inner-container">
+      <br>  
+      <style>
+        body {
+          font-family: Verdana, sans-serif;
+          margin: 0;
+        }
+        
+        * {
+          box-sizing: border-box;
+        }
+        
+        .row > .column {
+          padding: 0 8px;
+        }
+        
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        
+        .column {
+          float: left;
+          width: 25%;
+        }
+        
+        /* The Modal (background) */
+        .modal {
+          display: none;
+          position: fixed;
+          z-index: 1;
+          padding-top: 100px;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: black;
+        }
+        
+        /* Modal Content */
+        .modal-content {
+          position: relative;
+          background-color: #fefefe;
+          margin: auto;
+          padding: 0;
+          width: 90%;
+          max-width: 1200px;
+        }
+        
+        /* The Close Button */
+        .close {
+          color: white;
+          position: absolute;
+          top: 10px;
+          right: 25px;
+          font-size: 35px;
+          font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+          color: #999;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        
+        .mySlides {
+          display: none;
+        }
+        
+        .cursor {
+          cursor: pointer;
+        }
+        
+        /* Next & previous buttons */
+        .prev,
+        .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          padding: 16px;
+          margin-top: -50px;
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+        
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+        
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        
+        img {
+          margin-bottom: -4px;
+        }
+        
+        .caption-container {
+          text-align: center;
+          background-color: black;
+          padding: 2px 16px;
+          color: white;
+        }
+        
+        .demo {
+          opacity: 0.6;
+        }
+        
+        .active,
+        .demo:hover {
+          opacity: 1;
+        }
+        
+        img.hover-shadow {
+          transition: 0.3s;
+        }
+        
+        .hover-shadow:hover {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }    
+        p.opa {
+          font-size: large;
+
+        }
+        
+        </style>
+        <body>
+        
+        <h2 style="text-align:center">Top Wrestlers Career Summaries</h2>
+        
+        <div class="row">
+          <div class="column">
+            <p class= "opa" >Takakeisho</p>
+
+
+            <img src="https://sumo-data-bucket.s3.amazonaws.com/Takakeisho_CareerSummary.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+          </div>
+          <div class="column">
+            <p class= "opa" >Kotonowaka</p>
+            <img src="https://sumo-data-bucket.s3.amazonaws.com/Kotonowaka_CareerSummary.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+          </div>
+          <div class="column">
+            <p class= "opa" >Hakuho</p>
+            <img src="https://sumo-data-bucket.s3.amazonaws.com/Hakuho_CareerSummary.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+          </div>
+          <div class="column">
+            <p class= "opa" >Kagayaki</p>
+            <img src="https://sumo-data-bucket.s3.amazonaws.com/Kagayaki_CareerSummary.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+          </div>
+          <div class="column">
+            <p class= "opa" >Asanoyama</p>
+            <img src="https://sumo-data-bucket.s3.amazonaws.com/Asanoyama_CareerSummary.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+          </div>
+          <div class="column">
+            <p class= "opa" >Terunofuji</p>
+            <img src="https://sumo-data-bucket.s3.amazonaws.com/Terunofuji_CareerSummary.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+          </div>
+          <div class="column">
+            <p class= "opa" >Shodai</p>
+            <img src="https://sumo-data-bucket.s3.amazonaws.com/Shodai_CareerSummary.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+          </div>
+         
+        
+        </div>
+        
+        <div id="myModal" class="modal">
+          <span class="close cursor" onclick="closeModal()">&times;</span>
+          <div class="modal-content">
+        
+            <div class="mySlides">
+              <div class="numbertext">1 / 7</div>
+              <img src="https://sumo-data-bucket.s3.amazonaws.com/Takakeisho_CareerSummary.jpg" style="width:125%">
+            </div>
+        
+            <div class="mySlides">
+              <div class="numbertext">2 / 7</div>
+              <img src="https://sumo-data-bucket.s3.amazonaws.com/Kotonowaka_CareerSummary.jpg" style="width:125%">
+            </div>
+        
+            <div class="mySlides">
+              <div class="numbertext">3 / 7</div>
+              <img src="https://sumo-data-bucket.s3.amazonaws.com/Hakuho_CareerSummary.jpg" style="width:125%">
+            </div>
+            
+            <div class="mySlides">
+              <div class="numbertext">4 / 7</div>
+              <img src="https://sumo-data-bucket.s3.amazonaws.com/Kagayaki_CareerSummary.jpg" style="width:125%">
+            </div>
+        
+            <div class="mySlides">
+                <div class="numbertext">5 / 7</div>
+                <img src="https://sumo-data-bucket.s3.amazonaws.com/Asanoyama_CareerSummary.jpg" style="width:125%">
+              </div>
+        
+              <div class="mySlides">
+                <div class="numbertext">6 / 7</div>
+                <img src="https://sumo-data-bucket.s3.amazonaws.com/Terunofuji_CareerSummary.jpg" style="width:125%">
+              </div>
+        
+              <div class="mySlides">
+                <div class="numbertext">7 / 7</div>
+                <img src="https://sumo-data-bucket.s3.amazonaws.com/Shodai_CareerSummary.jpg" style="width:125%">
+              </div>
+              
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+        
+        
+            <div class="column">
+              <img class="demo cursor" src="https://sumo-data-bucket.s3.amazonaws.com/Takakeisho_CareerSummary.jpg" style="width:100%" onclick="currentSlide(1)" alt="Takakeisho_CareerSummary">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="https://sumo-data-bucket.s3.amazonaws.com/Kotonowaka_CareerSummary.jpg" style="width:100%" onclick="currentSlide(2)" alt="Kotonowaka_CareerSummary">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="https://sumo-data-bucket.s3.amazonaws.com/Hakuho_CareerSummary.jpg" style="width:100%" onclick="currentSlide(3)" alt="Hakuho_CareerSummary">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="https://sumo-data-bucket.s3.amazonaws.com/Kagayaki_CareerSummary.jpg" style="width:100%" onclick="currentSlide(4)" alt="Kagayaki_CareerSummary">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="https://sumo-data-bucket.s3.amazonaws.com/Asanoyama_CareerSummary.jpg" style="width:100%" onclick="currentSlide(5)" alt="Asanoyama_CareerSummary">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="https://sumo-data-bucket.s3.amazonaws.com/Terunofuji_CareerSummary.jpg" style="width:100%" onclick="currentSlide(6)" alt="Terunofuji_CareerSummary">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="https://sumo-data-bucket.s3.amazonaws.com/Shodai_CareerSummary.jpg" style="width:100%" onclick="currentSlide(7)" alt="Shodai_CareerSummary">
+              </div>
+        
+          </div>
+        </div>
+        
+        <script>
+        function openModal() {
+          document.getElementById("myModal").style.display = "block";
+        }
+        
+        function closeModal() {
+          document.getElementById("myModal").style.display = "none";
+        }
+        
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          var captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+        
+
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+
+</script>
+
+</body>
+</html> 

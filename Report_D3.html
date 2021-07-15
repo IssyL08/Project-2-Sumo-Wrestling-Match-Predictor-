@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>   
+    <title>Sumo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  
+    <link rel="stylesheet" href="assets/css/d3Style.css">
+
+    <httpProtocol>  
+      <customHeaders>  
+       <add name="Access-Control-Allow-Origin" value="*" />  
+       <add name="Access-Control-Allow-Headers" value="Content-Type" />  
+       <add name="Access-Control-Allow-Methods" value="GET, POST, PUT, DELETE, OPTIONS" />  
+      </customHeaders>  
+    </httpProtocol>
+</head>
+
+<body>
+<div id="main">
+    <div class="w3-teal">
+      <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+      <div class="w3-container">
+        <a href="Index.html" class="w3-bar-item w3-button w3-xlarge" style="color: #000; font-size: 20pt;"><h1>Sumo Top Wrestlers and Rankings</h1></a>
+      </div>
+    </div>
+</div>
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+    <a href="Index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="Data_ML.html" class="w3-bar-item w3-button">Data</a>
+    <a href="Report_Tab.html" class="w3-bar-item w3-button">Visualization</a>
+</div>
+
+<div class="row">
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Weight Vs Height</h5>
+        <p class="card-text">Weight and Height Comparison Over Tournament Years.</p>
+        <a href="Report_Tab.html" class="btn btn-primary">Detail report</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Top Active Rikishi</h5>
+        <p class="card-text">Top professional sumo wrestler.</p><br>
+        <a href="Report_D3.html" class="btn btn-primary">Detail report</a>
+      </div>
+    </div>
+</div>
+<div class="col-sm-3">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Wrestler Win Comparison</h5>
+      <p class="card-text">Wrestler Win Comparison, Start of Wrestler Career Showing Wrestler Average Career Wins and Max Rank.</p>
+      <a href="Report_Tab_1.html" class="btn btn-primary">Detail report</a>
+    </div>
+  </div>
+</div>
+<div class="col-sm-3">
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Win/Loss over year </h5>
+    <p class="card-text">Wrestler Tournament Win/Loss Comparison over the Years of the Top Wrestlers</p>
+    <a href="Report_Tab_2.html" class="btn btn-primary">Detail report</a>
+  </div>
+</div>
+</div>
+</div>
+
+<section id="heightinfo" style="background-color:white;">
+<div class="container" style="height: 120px; padding-top: 60px;">
+<div class="row">
+  <div class="col-md-12 mx-auto" style="text-align: center">
+    <div data-aos="fade-up">
+      <h5 style="color:black;"> </h5>
+      
+    </div>
+  </div>
+</div>  
+</section> 
+
+
+  <div class="container">
+  
+
+    <div class="row">
+      <div class="col-xs-1">
+        
+        <div class="article w3-center">
+          <h2>A rikishi is a professional sumo wrestler.</h2>
+          <p>Rikishi are expected to live according to centuries-old rules and most come from Japan, the only country where sumo is practiced professionally. Participation in official tournaments is the only means of marking achievement in sumo and the rank of an individual rikishi is based solely on official wins. </p>
+
+           </div>
+      </div>
+  
+      <section class=".wp-block-group__inner-container w3-center">
+        <div class="container-fluid wp-block-group__inner-container">
+          <br>  
+            <div class='col-sm-12' >
+              
+                <div class='col-sm-12 w3-card-4'>
+                <h5 class= "opa" > Ranking </h5>
+                <p>Professional sumo as administered by the Japan Sumo Association is divided into six ranked divisions. Wrestlers are promoted and demoted within and between these divisions based on the merit of their win/loss records in official tournaments. For more information see kachi-koshi and make-koshi. Wrestlers are also ranked within each division. The higher a wrestler's rank within a division is, the stronger the general level of opponents he will have to face becomes. According to tradition, each rank is further subdivided into East and West, with East being slightly more prestigious, and ranked slightly higher than its West counterpart. The divisions, ranked in order of hierarchy from highest to lowest, are as follows: </p>
+                  <img class="img-fluid" id="1st-image" src="https://blogs.transparent.com/japanese/files/2012/10/sumopyramid.gif" alt="Comparison" style="width: auto; height: 250px;">
+                  
+                  </a>
+                  
+                </div>
+              </div>
+            </div>
+         
+      </section>
+
+      
+      <div class="row">
+        <div class="col-xs-7 ">
+          <br>
+          <h1 class="w3-center"> Top Active Rikishi </h1>
+        </div>
+   
+      <div class="col-xs-5">
+        <div class="card">
+          <div class="card-body">
+        <div id="scatter"> 
+          <!-- We append our chart here. -->
+        </div>
+      
+      </div></div></div>
+
+        <div class="col-xs-9">
+          <div class="article">
+            <br> <br><br>
+            <p> In popular use, the term rikishi can mean any sumo wrestler and be an alternative term to sumotori (sumo practitioner) or the more colloquial sumosan. The two kanji characters that make up the word rikishi are "strength/power" and "gentleman/samurai"; consequently, and more idiomatically, the term can be defined as "a gentleman of strength".<br>
+
+            Within the world of professional sumo, rikishi is used as a catch-all term for wrestlers who are in the lower, un-salaried divisions of jonokuchi, jonidan, sandanme and makushita. The more prestigious term sekitori refers to wrestlers who have risen to the two highest divisions of jūryō and makuuchi and who have significantly more status, privilege and salary than their lower-division counterparts. </p>
+
+          <p>The life of a professional sumo wrestler is strictly regimented and has detailed prescriptions and rules for rikishi that have been observed for centuries, so much so that rikishi can be seen more as a way of life than a career.
+
+            They are expected to grow their hair long to form a topknot or chonmage, similar to the samurai hairstyles of the Edo Period. Furthermore, they are expected to wear the chonmage and traditional Japanese dress at all times when in public. Sumo life centers around the training stables, to which all active wrestlers must belong. Most wrestlers, and all junior ones, live in their stable in a dormitory style: training, cleaning, eating, sleeping and socializing together. </p>
+       
+          </div>
+             
+
+        </div>
+
+    </div>
+  </div>
+
+  <br>
+ 
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+  <!--<script type="text/javascript" src="assets/js/app - Sumo.js"></script>!-->
+  <script type="text/javascript" src="https://sumo-data-bucket.s3.amazonaws.com/app+-+Sumo.js"></script>
+  
+
+<script>
+
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+
+</script>
+
+
+</body>
+</html> 

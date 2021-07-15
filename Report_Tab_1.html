@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>   
+    <title>Sumo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="assets/css/d3Style.css">
+</head>
+
+<body>
+<div id="main">
+    <div class="w3-teal">
+      <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+      <div class="w3-container">
+        <a href="Index.html" class="w3-bar-item w3-button w3-xlarge" style="color: #000; font-size: 24pt;"><h1>Sumo Win Comparison Reports</h1></a>
+      </div>
+    </div>
+</div>
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+    <a href="Index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="Data_ML.html" class="w3-bar-item w3-button">Data</a>
+    <a href="Report_Tab.html" class="w3-bar-item w3-button">Visualization</a>
+</div>
+
+<div class="row">
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Weight Vs Height</h5>
+        <p class="card-text">Weight and Height Comparison Over Tournament Years.</p>
+        <a href="Report_Tab.html" class="btn btn-primary">Detail report</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Top Active Rikishi</h5>
+        <p class="card-text">Top professional sumo wrestler.</p><br>
+        <a href="Report_D3.html" class="btn btn-primary">Detail report</a>
+      </div>
+    </div>
+</div>
+<div class="col-sm-3">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Wrestler Win Comparison</h5>
+      <p class="card-text">Wrestler Win Comparison, Start of Wrestler Career Showing Wrestler Average Career Wins and Max Rank.</p>
+      <a href="Report_Tab_1.html" class="btn btn-primary">Detail report</a>
+    </div>
+  </div>
+</div>
+<div class="col-sm-3">
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Win/Loss over year </h5>
+    <p class="card-text">Wrestler Tournament Win/Loss Comparison over the Years of the Top Wrestlers.</p>
+    <a href="Report_Tab_2.html" class="btn btn-primary">Detail report</a>
+  </div>
+</div>
+</div>
+</div>
+  
+<section id="heightinfo" style="background-color:white;">
+  <div class="container" style="height: 120px; padding-top: 60px;">
+  <div class="row">
+    <div class="col-md-12 mx-auto" style="text-align: center">
+      <div data-aos="fade-up">
+        <h5 style="color:black;"> </h5>
+        
+      </div>
+    </div>
+</div>  
+</section> 
+  <div class="row">
+    <div class="col-sm-1">
+      
+    </div>
+    <div class="col-sm-2">
+      <div class="card">
+        <div class="card-body">
+          <h5 style="color:black;">Weight and Height Comparison Over Tournament Years.</h5>
+          <p>Wrestler win comparison between the top wrestlers from their wrestling start and the overall previous wins of the top wrestlers.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-7">
+      <div class="card">
+        <div class="card-body">
+          <div class='tableauPlaceholder' id='viz1626296237202' style='position: relative'><noscript><a href='#'><img alt='Wrestler Win Comparison ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;We&#47;WeightandHeightComparisonOverMultipleTournamentYears&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='WeightandHeightComparisonOverMultipleTournamentYears&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;We&#47;WeightandHeightComparisonOverMultipleTournamentYears&#47;Dashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1626296237202');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='777px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+
+</script>
+
+
+</body>
+</html> 

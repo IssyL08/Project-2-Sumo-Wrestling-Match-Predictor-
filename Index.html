@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>   
+    <title>Sumo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<div id="main">
+    <div class="w3-teal">
+      <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+      <div class="w3-container">
+        <a href="Index.html" class="w3-bar-item w3-button w3-xlarge" style="color: #000; font-size: 28pt;"> <h1>Sumo</h1>
+        </a>
+      </div>
+    </div>
+</div>
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+    <a href="Index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="Data_ML.html" class="w3-bar-item w3-button">Data</a>
+    <a href="Report_Tab.html" class="w3-bar-item w3-button">Visualization</a>
+    
+</div>
+<br>
+
+<Section>
+  <div class="w3-container w3-center">
+    <h1>What is Sumo?</h1>
+<div class="w3-content w3-display-container" style="max-width:800px">
+  <h2 class="w3-large">
+    Sumo is a form of competitive full-contact wrestling where a rikishi (wrestler) attempts to force his opponent out of a circular ring (dohyo) or into touching the ground with any body part other than the soles of his feet (usually by throwing, shoving or pushing him down). 
+    
+  </h2>
+  <img class="mySlides w3-hover-opacity" src="https://sumo-data-bucket.s3.amazonaws.com/Sum.png" style="width:100%">
+  <img class="mySlides w3-hover-opacity" src="https://sumo-data-bucket.s3.amazonaws.com/Sumo1.PNG" style="width:100%">
+  <img class="mySlides w3-hover-opacity" src="https://sumo-data-bucket.s3.amazonaws.com/Asashoryu_fight_Jan08.JPG" style="width:100%">
+
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  </div>
+</div>
+<br>
+<section id="heightinfo" style="background-color:white;">
+  <div class="container" style="height: 60px; padding-top: 60px;">
+  <div class="row">
+    <div class="col-md-12 mx-auto" style="text-align: center">
+      <div data-aos="fade-up">
+        <h5 style="color:white;"> </h5>
+         
+      </div>
+    </div>
+</div>  
+</section>  
+
+
+
+
+<section class=".wp-block-group__inner-container w3-display-container w3-content" style="width: 100px; height: 100px;">
+  <div class="card-deck">
+    <div class="card">
+
+      <a href="Report_Tab.html">
+        <img class="img-fluid btn btn-primary" style="width: 100px; height: 50px;">
+        <h5>Reports</h5>
+        </a>
+    </div>
+  </div>
+</section>
+
+<section class=".wp-block-group__inner-container w3-center w3-display-container w3-content "><br></section>
+
+<div class="card-deck">
+  <div class="card">
+    <img class="card-img-top" src="https://sumo-data-bucket.s3.amazonaws.com/green.PNG"  alt="Card image cap" style="height: 20px; color:thistle;">
+    <div class="card-body">
+      <h5 class="card-title">History of Sumo</h5>
+      <img class="img-fluid" id="1st-image" src="https://sumo-data-bucket.s3.amazonaws.com/1-2.jpg" alt="Comparison" style="width: auto; height: 150px;">
+      <p class="card-text">Sumo originated in the Heian Period in the year 794 CE. Over the centuries, sumo has undergone a remarkable evolution. </p>
+    <p>Sumo began many centuries ago and developed into its present form in the Edo period (1603-1868). <br>
+      Rikishi (wrestlers) wear their hair in a topknot (chonmage), which was a normal hairstyle in the Edo period. The referee, meanwhile, wears the same kind of clothes as a samurai of 600 years ago. Many aspects of Japan's traditional culture can be seen in sumo. For example, the wrestlers throw salt into the ring to purify it before they begin their match, as the dohyo is considered a sacred place. Sumo has a long history, and it has been called Japan's national sport. Although many professional sports are played in Japan, such as baseball and soccer, sumo is the nation's oldest professional sport. 
+      While it is tough to trace the pictures and detailed information from over 1,200 years back, we have found pictures of the wrestlers from the 18th and 19th centuries. The photos clearly show that, unlike today, the sumo wrestlers used to be skinny and muscular.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted"> <a href="https://en.wikipedia.org/wiki/Sumo">Click here for more details</a></small>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="https://sumo-data-bucket.s3.amazonaws.com/purple.PNG" alt="Card image cap" style="height: 20px;">
+    <div class="card-body">
+      <h5 class="card-title">Fun Facts</h5>
+      <img class="img-fluid" id="1st-image" src="https://sumo-data-bucket.s3.amazonaws.com/1280px-Hakuh%C5%8D_vs_G%C5%8Deid%C5%8D_May_2014.jpg" alt="Comparison" style="width: auto; height: 150px;">
+      <p class="card-text">Sumo wrestling was born as a Shinto ritual to entertain gods. It was believed that if the gods are not pleased, they would not bring a good harvest season.</p>
+      <li>Ancient form of wrestling, the national sport of Japan.  </li> <br>
+      <li>Half sport, half religion (just like American Football!)</li><br>
+      <li> 6 Tournaments every year (in odd-numbered months) lasting 15 days each</li><br>
+      <li> Two wrestlers face each other in an elevated ring with only their strength, girth, and mawashi (loin cloth/belt).</li><br> 
+      <li> The wrestler who first exits the ring or touches the ground with any part of his body besides the soles of his feet loses</li><br>
+      <li> No weight or class restrictions, only a ranking hierarchy based on their performance</li><br>
+      <li> Wrestlers with winning scores (8 wins or more) move up the hierarchy while those with losing scores (8 loses or more) move down</li><br>
+      <li> The pinnacle of hierarchy is the Yokozuna (grand champion). He cannot be demoted, but he is expected to retire when his performance begins to flounder</li><br>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted"> <a href="https://mai-ko.com/travel/culture-in-japan/sumo/sumo-2/">Click here for more details</a></small>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="https://sumo-data-bucket.s3.amazonaws.com/orange.PNG" alt="Card image cap" style="height: 20px;">
+    <div class="card-body">
+      <h5 class="card-title">**Objective:**</h5>
+      <img class="img-fluid" id="1st-image" src="https://sumo-data-bucket.s3.amazonaws.com/Sumo1.PNG" alt="Comparison" style="width: auto; height: 150px;">
+      <p class="card-text"> Objective: trying different machine learning methods to develop a sumo wrestling match predictor.</p>
+      <p>**Dataset source:** <a href="https://data.world/cervus/sumo-japan/" target="_blank">Sumo Japan Dataset   </a>  curated by Mikhail Zhilkin  </p>
+    
+
+      <br>
+        <p>1. banzuke.csv: Final results for each wrestler in all divisions for every tournament going back to 1983 (12 columns, 169,105 rows). Includes wrestler's final scores, height(cm), weight(kg), birth date and rank.</p>
+        <br>
+        <p>2. results.csv: Match results for each day in tournaments since 1983 for the top two divisions: Makuuchi and Juryo (13 columns, 219,990 rows).<br>
+        </p>
+        
+        <a href="http://sumodb.sumogames.de/Query.aspx" target="_blank"> Wrestler Look-up Tool </a>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted"> <a href="http://sumodb.sumogames.de/Query.aspx">Click here for more details</a></small>
+    </div>
+  </div>
+</div>
+
+
+<section id="heightinfo" style="background-color:white;">
+  <div class="container" style="height: 60px; padding-top: 60px;">
+  <div class="row">
+    <div class="col-md-12 mx-auto" style="text-align: center">
+      <div data-aos="fade-up">
+        <h5 style="color:white;"> </h5>
+         
+      </div>
+    </div>
+</div>  
+</section> 
+
+<section class=".wp-block-group__inner-container w3-center">
+  <div class="container-fluid wp-block-group__inner-container">
+    <br>
+      <div class="col-sm-12"><p style="margin-left: 100px;"> <b>Cotact us</b>: In case if you want to give us feedback or if you have any objection with content on our website.</p></div>
+
+      <div class='col-sm-12' style="margin-left: 100px;">
+        <div class="row bg-white">
+          
+          <div class='col-sm-2 w3-card-4'>
+            <a href="https://github.com/TimWeir/Project-2-Tim"><p class= "opa" >Tim Weir</p>
+              <img class="img-fluid" id="1st-image" src="https://sumo-data-bucket.s3.amazonaws.com/Tim+Weir.PNG" alt="Comparison" style="width: auto; height: 150px;">
+              </a>
+             
+          </div>
+          <div class='col-sm-2 w3-card-4'>
+            <a href="https://www.linkedin.com/in/isabella-lehar-628abb1b/"><p class= "opa" >Isabella Lehar </p>
+            <img class="img-fluid" id="1st-image" src="https://sumo-data-bucket.s3.amazonaws.com/Issy.jpg" alt="Comparison" style="width: auto; height: 150px;">
+            
+            </a>
+            
+          </div>
+          <div class='col-sm-2 w3-card-4'>
+            <a href="https://github.com/IthamarFrancois"><p class= "opa" >Ithamar Francois</p>
+              <img class="img-fluid" id="1st-image" src="https://sumo-data-bucket.s3.amazonaws.com/Ithamar+Francois+-+Headshot.jpg" alt="Comparison" style="width: auto; height: 150px;">
+             
+            </a>
+          
+          </div>
+          <div class='col-sm-2 w3-card-4'>
+            <a href="https://github.com/ElVejigante"><p class= "opa" >Ernesto Cancel</p>
+              <img class="img-fluid" id="1st-image" src="https://sumo-data-bucket.s3.amazonaws.com/Ernesto.jfif" alt="Comparison" style="width: auto; height: 150px;">
+             
+            </a>
+              
+          </div>
+          <div class='col-sm-2 w3-card-4'>
+            <a href="https://github.com/MelatBekele/Project-2"><p class= "opa" >Melat Bekele</p>
+              <img class="img-fluid" id="1st-image" src="https://sumo-data-bucket.s3.amazonaws.com/Melat.PNG" alt="Comparison" style="width: auto; height: 150px;">
+              
+            </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+
+</script>
+
+</body>
+</html> 
