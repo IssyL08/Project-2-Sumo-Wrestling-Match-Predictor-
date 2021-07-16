@@ -2,6 +2,11 @@
 
 **Objective:** trying different machine learning methods to develop a sumo wrestling match predictor.
 **Dataset source:** https://data.world/cervus/sumo-japan, curated by Mikhail Zhilkin
+
+### REQUIRED LIBRARY ### 
+https://pypi.org/project/dataframe-image/ (pip install dataframe-image)
+necessary for successful execution of ml_notebook.ipynb
+
 1. banzuke.csv: Final results for each wrestler in all divisions for every tournament going back to 1983 (12 columns, 169,105 rows). Includes wrestler's final scores, height(cm), weight(kg), birth date and rank.
 2. results.csv: Match results for each day in tournaments since 1983 for the top two divisions: Makuuchi and Juryo (13 columns, 219,990 rows).
 **Understanding & Preparing Data:** 
